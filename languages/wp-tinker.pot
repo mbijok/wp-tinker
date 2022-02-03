@@ -1,0 +1,2 @@
+# Copyright (C) 2022 Mariusz Bijok
+# This file is distributed under the same license as the WP Tinker plugin.
