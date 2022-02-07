@@ -156,6 +156,9 @@ class Wp_Tinker {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
+		// Add settings page.
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'settings_page' );
+
 	}
 
 	/**

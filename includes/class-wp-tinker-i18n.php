@@ -23,9 +23,7 @@
  * @subpackage Wp_Tinker/includes
  * @author     Mariusz Bijok <mbijok@outlook.com>
  */
-class Wp_Tinker_i18n {
-
-
+class Wp_Tinker_i18n { //phpcs:ignore
 	/**
 	 * Load the plugin text domain for translation.
 	 *
@@ -38,9 +36,5 @@ class Wp_Tinker_i18n {
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
-
 	}
-
-
-
 }

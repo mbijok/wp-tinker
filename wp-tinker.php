@@ -9,7 +9,7 @@
  * Plugin Name:       WP Tinker
  * Plugin URI:        https://github.com/mbijok/wp-tinker
  * Description:       A plugin that adds a few tweaks and modifications to WordPress.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Mariusz Bijok
  * Author URI:        https://github.com/mbijok
  * License:           MIT License
@@ -26,7 +26,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Currently plugin version - based on https://semver.org
  */
-define( 'WP_TINKER_VERSION', '1.0.0' );
+define( 'WP_TINKER_VERSION', '1.0.1' );
 
 /**
  * The code that runs during plugin activation.
@@ -36,6 +36,7 @@ function activate_wp_tinker() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-tinker-activator.php';
 	Wp_Tinker_Activator::activate();
 }
+register_activation_hook( __FILE__, 'activate_wp_tinker' );
 
 /**
  * The code that runs during plugin deactivation.
@@ -45,8 +46,6 @@ function deactivate_wp_tinker() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wp-tinker-deactivator.php';
 	Wp_Tinker_Deactivator::deactivate();
 }
-
-register_activation_hook( __FILE__, 'activate_wp_tinker' );
 register_deactivation_hook( __FILE__, 'deactivate_wp_tinker' );
 
 /**
